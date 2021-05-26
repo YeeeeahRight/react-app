@@ -1,14 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 import {Container, Row, Card, Col, Image} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import NavHeader from "./NavHeader";
 import data from "../data/writers";
 
-export default function Home() {
-    return (
-        <>
-            <NavHeader/>
+class Home extends Component {
 
+    render() {
+        return <>
+            <NavHeader/>
             <Container id="about" fluid style={{backgroundColor: "#242F3D", height: "100vh", color: "white"}}
                        className="d-flex flex-column justify-content-center">
                 <Row className="justify-content-center">
@@ -29,62 +29,44 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <Container id="best" fluid style={{height: "100vh", backgroundColor:"white"}}
+            <Container id="best" fluid style={{height: "100vh", backgroundColor: "white"}}
                        className="d-flex flex-column justify-content-center align-items-center">
                 <h3 className="mb-3 mt-2">Деятель дня</h3>
                 <Card className="text-center" style={{width: "300px"}} bg="white">
-                    <Card.Img variant="top" src={data[0].img} alt="image"/>
+                    <Card.Img variant="top" src={writers[0].img} alt="image"/>
                     <Card.Body>
-                        <Card.Title>{data[0].name}</Card.Title>
-                        <Card.Subtitle className="font-style: italic">{data[1].name}</Card.Subtitle>
+                        <Card.Title>{writers[0].name}</Card.Title>
+                        <Card.Subtitle className="font-style: italic">{writers[0].name}</Card.Subtitle>
                         <Card.Text>
-                            {data[0].description}
+                            {writers[0].shortDescription}
                         </Card.Text>
                         <Link className="btn btn-dark" to="/poets/2">Подробно</Link>
                     </Card.Body>
                 </Card>
             </Container>
 
-
-            <Container id="devs" fluid style={{height: "20vh", backgroundColor: "#17212B"}}
-                       className="d-flex justify-content-around text-center">
-                <Row style={{width: "70vh"}}>
-                    <Col>
-                        <a className="dev" href="https://github.com/YeeeeahRight">
-                            <Image src={sanya} roundedCircle/>
-                            <h4>
-                                Александр
-                            </h4>
-                        </a>
-                    </Col>
-                    <Col>
-                        <a className="dev" href="https://github.com/artem224">
-                            <Image src={artemka} roundedCircle/>
-                            <h4>
-                                Артём
-                            </h4>
-                        </a>
-                    </Col>
-                    <Col>
-                        <a className="dev" href="https://github.com/rumik2281">
-                            <Image src={kiruha} roundedCircle/>
-                            <h4>
-                                Кирилл
-                            </h4>
-                        </a>
-                    </Col>
-                </Row>
-            </Container>
-
-            {/*  <Form className="d-flex">
-                        <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="mr-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>*/}
+            {this.renderDevs(devs)}
         </>
-    )
+    }
+
+    renderDevs(data) {
+        return <Container id="devs" fluid style={{height: "20vh", backgroundColor: "#17212B"}}
+                          className="d-flex justify-content-around text-center">
+            <Row style={{width: "70vh"}}>
+                {
+                    data.map((dev) => <Col>
+                            <a className="dev" href={dev.link}>
+                                <Image src={dev.img} roundedCircle/>
+                                <h4>
+                                    {dev.name}
+                                </h4>
+                            </a>
+                        </Col>
+                    )
+                }
+            </Row>
+        </Container>
+    }
 }
+
+export default Home;
