@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Card, NavLink} from "react-bootstrap";
-import data from "../data/writers.js";
+import writers from "../data/writers.js";
 
 class WritersList extends Component {
     render() {

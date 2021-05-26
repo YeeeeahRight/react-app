@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {Container, Row, Card, Col, Image} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import NavHeader from "./NavHeader";
-import data from "../data/writers";
+import writers from "../data/writers";
+import devs from "../data/devs";
 
 class Home extends Component {
 
@@ -43,6 +44,7 @@ class Home extends Component {
                         <Link className="btn btn-dark" to="/poets/2">Подробно</Link>
                     </Card.Body>
                 </Card>
+
             </Container>
 
             {this.renderDevs(devs)}
