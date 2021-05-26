@@ -1,12 +1,8 @@
 import React from "react";
 import {Container, Row, Card, Col, Image} from 'react-bootstrap';
 import {Link} from "react-router-dom";
-import first from "../assets/first.jpeg";
-import sanya from "../assets/sanya.jpg";
-import artemka from "../assets/artemka.jpg";
-import kiruha from "../assets/kiruha.jpg";
 import NavHeader from "./NavHeader";
-
+import data from "../data/writers";
 
 export default function Home() {
     return (
@@ -37,14 +33,14 @@ export default function Home() {
                        className="d-flex flex-column justify-content-center align-items-center">
                 <h3 className="mb-3 mt-2">Деятель дня</h3>
                 <Card className="text-center" style={{width: "300px"}} bg="white">
-                    <Card.Img variant="top" src={first}/>
+                    <Card.Img variant="top" src={data[0].img} alt="image"/>
                     <Card.Body>
-                        <Card.Title>Джордж Флойд</Card.Title>
-                        <Card.Subtitle className="font-style: italic">1975 - 2021</Card.Subtitle>
+                        <Card.Title>{data[0].name}</Card.Title>
+                        <Card.Subtitle className="font-style: italic">{data[1].name}</Card.Subtitle>
                         <Card.Text>
-                            Хороший парень
+                            {data[0].description}
                         </Card.Text>
-                        <Link className="btn btn-dark" to="/poets/2">Ай кэнт брыф</Link>
+                        <Link className="btn btn-dark" to="/poets/2">Подробно</Link>
                     </Card.Body>
                 </Card>
             </Container>

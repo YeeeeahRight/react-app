@@ -1,8 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Components/Home';
-import Writers from './Components/Writers';
-import newdata from "./Components/Writers";
+import Home from './components/Home';
+import Writers from './components/Writers';
 
 import './App.css';
 

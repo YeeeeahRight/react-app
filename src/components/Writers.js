@@ -1,13 +1,6 @@
 import React, {Component} from "react";
-import {Button, Card, CardGroup, Col, Container, Form, FormControl, Image, Nav, NavLink, Row} from "react-bootstrap";
-import first from "../assets/first.jpeg";
-import second from "../assets/second.jpg";
-import third from "../assets/third.jpg";
-import fourth from "../assets/fourth.jpg";
-import five from "../assets/five.jpg";
-import six from "../assets/six.jpg"
-import NavHeader from "./NavHeader";
-import data from "../assets/data.json";
+import {Card, NavLink} from "react-bootstrap";
+import data from "../data/writers.js";
 
 class WritersList extends Component {
     render() {
