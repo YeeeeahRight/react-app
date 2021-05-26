@@ -20,7 +20,6 @@ function App() {
                 </Route>
                 <Route path="/writers">
                     <Writers/>
-                    <newdata/>
                 </Route>
             </Switch>
         </Router>
