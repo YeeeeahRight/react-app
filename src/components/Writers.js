@@ -3,37 +3,32 @@ import {Card, NavLink} from "react-bootstrap";
 import writers from "../data/writers.js";
 
 class WritersList extends Component {
+
     render() {
-        return (
-            <div>
-                {data.map((dataWriters, index) => {
-                        return <div>
-                            <h1></h1>
-                            <Card className="mb-4" style={{width: '18rem', height: '800px'}}>
-                                <img
-                                    className="img-fluid"
-                                    src={dataWriters.img}
-
-                                    style={{height: '250px'}}
-                                />
-                                <Card.Body style={{backgroundColor: "#0E1621"}}>
-                                    <Card.Title style={{color: "white"}}>{dataWriters.name}</Card.Title>
-                                    <Card.Text style={{color: "white"}}>
-                                        {dataWriters.desc}
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer>
-                                    <NavLink>Ссылка на писателя</NavLink>
-                                </Card.Footer>
-                            </Card>
-
-                        </div>
-
-                    }
-                )}
-            </div>
-        )
+        return <div className="d-flex align-content-center flex-wrap">
+            {writers.map((writer) =>
+                <div className="content">
+                    <Card className="mb-4" style={{width: '18rem', height: '600px'}}>
+                        <img
+                            className="img-fluid"
+                            src={writer.img}
+                            style={{height: '250px'}}
+                        />
+                        <Card.Body style={{backgroundColor: "#0E1621"}}>
+                            <Card.Title style={{color: "white"}}>{writer.name}</Card.Title>
+                            <Card.Text style={{color: "white"}}>
+                                {writer.shortDescription}
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <NavLink>Подробно</NavLink>
+                        </Card.Footer>
+                    </Card>
+                </div>
+            )}
+        </div>
     }
+
 }
 
 export default WritersList;
@@ -44,8 +39,13 @@ export default WritersList;
 //         <>
 //             <NavHeader/>
 //
-//             <Form className=" form d-flex" style={{backgroundColor: "bisque"}}>
-//                 <FormControl
+//             <Form className=" form d-flex" style= { {
+
+// backgroundColor: "bisque"
+// }
+// //}>
+//
+//<FormControl
 //                     type="search"
 //                     placeholder="Search"
 //                     className="mr-2"
