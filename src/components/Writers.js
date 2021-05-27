@@ -1,45 +1,65 @@
 import React, {Component} from "react";
+import {useState} from "react";
 import {Card, NavLink} from "react-bootstrap";
 import writers from "../data/writers.js";
+import {MDBCol} from "mdbreact";
 
-class WritersList extends Component {
 
-    render() {
-        return <div className="d-flex align-content-center flex-wrap">
-            {writers.map((writer) =>
-                <div className="content">
-                    <Card className="mb-4" style={{width: '18rem', height: '600px'}}>
-                        <img
-                            className="img-fluid"
-                            src={writer.img}
-                            style={{height: '250px'}}
-                        />
-                        <Card.Body style={{backgroundColor: "#0E1621"}}>
-                            <Card.Title style={{color: "white"}}>{writer.name}</Card.Title>
-                            <Card.Text style={{color: "white"}}>
-                                {writer.shortDescription}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <NavLink>Подробно</NavLink>
-                        </Card.Footer>
-                    </Card>
-                </div>
+export default function Writers() {
+
+
+    const [value, setValue] = useState('');
+
+    const filteredWriters = writers.filter(writer => {
+        return writer.name.toLowerCase().includes(value.toLowerCase());
+    })
+
+
+    return <>
+
+        <div className="d-flex justify-content-center">
+            <MDBCol md="6">
+                <form className="form-inline mt-4 mb-4">
+                    <input
+                        type="text"
+                        placeholder="Search writer..."
+                        className="search_input form-control form-control-sm"
+                        onChange={(event => setValue(event.target.value))}
+                    />
+                </form>
+            </MDBCol>
+        </div>
+
+        <div className="d-flex justify-content-around flex-wrap" style={{width: "80%", margin: "auto"}}>
+            {filteredWriters.map((writer) =>
+
+                <Card className="mb-4 writer">
+                    <img
+                        src={writer.img}
+                        style={{height: '250px'}}
+                    />
+                    <Card.Body style={{backgroundColor: "#0E1621"}}>
+                        <Card.Title style={{color: "white", marginBottom: "14px"}}>{writer.name}</Card.Title>
+                        <Card.Text style={{color: "white"}}>
+                            {writer.shortDescription}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                        <NavLink>Подробно</NavLink>
+                    </Card.Footer>
+                </Card>
             )}
         </div>
-    }
 
+    </>
 }
 
-export default WritersList;
 
 // export default function ListWriters()
 
 //     return (
-//         <>
-//             <NavHeader/>
 //
-//             <Form className=" form d-flex" style= { {
+
 
 // backgroundColor: "bisque"
 // }
