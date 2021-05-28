@@ -1,0 +1,55 @@
+{
+  "header": {
+    "header": "Writers of Belarus",
+    "language": "Language",
+    "writers": "Writers",
+    "about": "About site",
+    "best": "Writer of the day",
+    "devs": "Developers"
+  },
+  "home": {
+    "aboutHeader": "Site about belorussian writers",
+    "aboutText1": "Hello, here you will find interesting information about Belarusian writers!",
+    "aboutText2": "You can find out the biography of the writer, photos, videos about him and much, much more!",
+    "aboutText3": "Also every day we choose the writer of the day, so don't forget to visit our website!"
+  },
+  "devs": {
+    "alexander": "Alexander",
+    "artem": "Artem",
+    "kirill": "Kirill"
+  },
+  "writers": {
+    "search": "Search writer...",
+    "details": "Details",
+    "bryl": {
+      "name": "Janka Bryl",
+      "description": "Was born in Odessa in the family of the railway worker Anton Danilovich Bryl. In 1922, his family returned to their hometown of Zagorje, which was then in Poland. In 1931 Bryl graduated from the Polish seven-year school and entered the Navogrudok gymnasium, but was unable to study due to financial difficulties.",
+      "shortDescription": "Janka Bryl - the last of the writers from Belarus to gain recognition in the Soviet Union."
+    },
+    "dubovka": {
+      "name": "Vladimir Nikolaevich Dubovka",
+      "description": "Vladimir Nikolaevich Dubovka (July 15, 1900 - March 20, 1976, Moscow) — Belarusian Soviet poet, prose writer, linguist, translator, literary critic. Laureate of the Y. Kupala Literary Prize (1962). Member of the Writers' Union of the USSR (1958).",
+      "shortDescription": "Belarusian poet, prose writer, translator, critic. Born on the territory of the modern Postavy region."
+    },
+    "dudar": {
+      "name": "Ales Dudar",
+      "description": "Ales Dudar (Aljaksandr Aljaksandrawitsch Dajlidowitsch. Pseudonym: T. Hlybocki; 1904—1937) — Belarusian Soviet poet, critic, novelist, translator. One of the organizers of the Belarusian literary and artistic association \"Maladnyak\". Member of the Writers' Union of the USSR (1934).",
+      "shortDescription": "Ales Dudar — Belarusian Soviet poet, critic, novelist, translator."
+    },
+    "jvalevskii": {
+      "name": "Andrey Valentinovich Zhvalevskiy",
+      "description": "In 1991 he graduated with honors from the Faculty of Physics of the Belarusian State University. After graduation, he was engaged in fundamental science, design of securities and security papers, and worked in a publishing house. The first book \"Porri Gatter and the Stone Philosopher\", co-authored with Igor Mytko, was published in 2002 and immediately brought fame to the authors. In addition to the Porry Gatter cycle, he wrote a series of ironic women's novels M + F (co-authored with Evgenia Pasternak), fantasy novels The Master of the Evil Eye.",
+      "shortDescription": "Andrey Zhvalevskiy was born on May 28, 1967 in Grodno, Belarus."
+    },
+    "bondarenko": {
+      "name": "Vyacheslav Vasilievich Bondarenko",
+      "description": "Vyacheslav Vasilievich Bondarenko (born May 9, 1974, Riga, Latvian SSR) - Russian writer and public figure living in Belarus. Known as an author's historian in the series \"ZhZL\", including biographies of Peter Andreevich Vyazemsky, Lavr Georgievich Kornilov and Archimandrite John (Krestyankin), as well as the author of the film novels \"Liquidation\" and \"Kadetstvo",
+      "shortDescription": "Vyacheslav Vasilyevich Bondarenko is a Belarusian writer, TV presenter, historian, journalist, screenwriter, radio host."
+    },
+    "ledenev": {
+      "name": "Viktor Ivanovich Ledenev",
+      "description": "The life of the Belarusian writer and playwright Viktor Ledenev is as diverse as the genres in which he works. He was born in the North Caucasus, in Adygea, where his father, after graduating from Rostov University, worked to create schools in this mountainous republic. There their family was also caught by the war. His father went to the front, and Viktor, his older brother Alexander and his mother remained in the occupation. However, not only the stay in the occupied territory, he had to indicate all his life in the Soviet era in various questionnaires.",
+      "shortDescription": "The life of the Belarusian writer and playwright Viktor Ledenev is as diverse as the genres in which he works."
+    }
+  }
+}
