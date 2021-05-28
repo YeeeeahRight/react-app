@@ -1,28 +1,31 @@
-import React, {Component} from "react";
+import React from "react";
 import {useState} from "react";
 import {Card, NavLink} from "react-bootstrap";
 import writers from "../data/writers.js";
 import {MDBCol} from "mdbreact";
+import {useTranslation} from "react-i18next";
+import NavHeader from "./NavHeader";
 
 
 export default function Writers() {
 
-
+    const {t} = useTranslation();
     const [value, setValue] = useState('');
 
     const filteredWriters = writers.filter(writer => {
-        return writer.name.toLowerCase().includes(value.toLowerCase());
+        return t(writer.name).toLowerCase().includes(value.toLowerCase());
     })
 
 
     return <>
+        <NavHeader/>
 
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center mt-5">
             <MDBCol md="6">
                 <form className="form-inline mt-4 mb-4">
                     <input
                         type="text"
-                        placeholder="Search writer..."
+                        placeholder={t('writers.search')}
                         className="search_input form-control form-control-sm"
                         onChange={(event => setValue(event.target.value))}
                     />
@@ -39,13 +42,17 @@ export default function Writers() {
                         style={{height: '250px'}}
                     />
                     <Card.Body style={{backgroundColor: "#0E1621"}}>
-                        <Card.Title style={{color: "white", marginBottom: "14px"}}>{writer.name}</Card.Title>
+                        <Card.Title style={{color: "white", marginBottom: "15px"}}>
+                            {t(writer.name)}
+                        </Card.Title>
                         <Card.Text style={{color: "white"}}>
-                            {writer.shortDescription}
+                            {t(writer.shortDescription)}
                         </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                        <NavLink>Подробно</NavLink>
+                    <Card.Footer style={{height: "55px"}}>
+                        <NavLink style={{fontSize: "20px", color: "black", padding: "0"}}>
+                            {t('writers.details')}
+                        </NavLink>
                     </Card.Footer>
                 </Card>
             )}

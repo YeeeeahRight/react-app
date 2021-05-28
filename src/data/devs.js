@@ -1,19 +1,19 @@
 const devs = [
     {
         id: 1,
-        name: "Alexander",
+        name: "devs.alexander",
         link: "https://github.com/YeeeeahRight",
         img: "/images/sanya.jpg"
     },
     {
         id: 2,
-        name: "Artem",
+        name: "devs.artem",
         link: "https://github.com/YeeeeahRight",
         img: "/images/artemka.jpg"
     },
     {
         id: 3,
-        name: "Kiril",
+        name: "devs.kirill",
         link: "https://github.com/YeeeeahRight",
         img: "/images/kiruha.jpg"
     }
