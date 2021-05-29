@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import Home from './components/Home';
-import Writers from './components/Writers';
+import WriterList from './components/WriterList';
 
 import './App.css';
 
@@ -19,7 +19,7 @@ function App() {
                         <Home/>
                     </Route>
                     <Route path="/writers/:id?">
-                        <Writers/>
+                        <WriterList/>
                     </Route>
                 </Switch>
             </Router>

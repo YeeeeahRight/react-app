@@ -48,7 +48,7 @@ export default function Home() {
                         <Card.Text className="mt-2">
                             {t(writers[0].shortDescription)}
                         </Card.Text>
-                        <Link className="btn btn-dark" to="/writers/2">{t('writers.details')}</Link>
+                        <Link className="btn btn-dark" to="/writers/1">{t('writers.details')}</Link>
                     </Card.Body>
                 </Card>
 
