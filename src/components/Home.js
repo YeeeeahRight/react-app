@@ -33,11 +33,11 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <Container id="best" fluid style={{height: "900px"}}
+            <Container id="best" fluid style={{height: "100vh"}}
                        className="d-flex flex-column justify-content-center align-items-center bg-white">
                 <h3 className="mb-3 mt-1">{t('header.best')}</h3>
-                <Card className="text-center" style={{width: "300px"}} bg="white">
-                    <Card.Img variant="top" src={writers[0].img} alt="image"/>
+                <Card className="text-center" style={{width: "39vh"}} bg="white">
+                    <Card.Img variant="top" src={writers[0].img} alt="image" style={{height: "50vh"}}/>
                     <Card.Body>
                         <Card.Title>
                             {t(writers[0].name)}
@@ -60,7 +60,7 @@ export default function Home() {
     );
 
     function renderDevs(data) {
-        return <Container id="devs" fluid style={{height: "20vh", backgroundColor: "#17212B"}}
+        return <Container id="devs" fluid style={{backgroundColor: "#17212B"}}
                           className="d-flex justify-content-around text-center">
             <Row style={{width: "70vh"}}>
                 {

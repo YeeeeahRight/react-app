@@ -7,7 +7,7 @@ const writers = [
         years: "1917-2006",
         img: "/images/first.jpeg",
         "photos": [
-            "https://narbel.bsu.by/wp-content/uploads/2018/08/word-image-733x1024.jpeg",
+            "https://vytoki.net/content/00524-1-665x443.jpg?__id29045",
             "https://minsknews.by/wp-content/uploads/2020/10/ulicza-imeni.jpg",
             "https://www.nlb.by/upload/iblock/a79/bryl.jpg"
         ],
