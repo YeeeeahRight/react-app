@@ -33,6 +33,10 @@ export default function Writer(props) {
         {renderPhotos()}
 
         <Container className="mt-5 mb-4" style={{width: '70%'}}>
+            <iframe style={{height: "60vh", width: "100%"}} src={writer.video} allowFullScreen></iframe>
+        </Container>
+
+        <Container className="mt-5 mb-4" style={{width: '70%'}}>
             <iframe style={{height: "60vh", width: "100%"}} src={writer.location}></iframe>
         </Container>
 
