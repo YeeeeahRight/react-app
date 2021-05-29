@@ -13,8 +13,8 @@ export default function Home() {
     return (
         <>
             <NavHeader/>
-            <Container id="about" fluid style={{backgroundColor: "#242F3D", height: "100vh", color: "white"}}
-                       className="d-flex flex-column justify-content-center">
+            <Container id="about" fluid style={{backgroundColor: "#242F3D", height: "100vh"}}
+                       className="d-flex flex-column justify-content-center text-white">
                 <Row className="justify-content-center">
                     <h1 className="big-heading text-center">
                         {t('home.aboutHeader')}
@@ -33,8 +33,8 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <Container id="best" fluid style={{height: "107vh", backgroundColor: "white"}}
-                       className="d-flex flex-column justify-content-center align-items-center">
+            <Container id="best" fluid style={{height: "900px"}}
+                       className="d-flex flex-column justify-content-center align-items-center bg-white">
                 <h3 className="mb-3 mt-1">{t('header.best')}</h3>
                 <Card className="text-center" style={{width: "300px"}} bg="white">
                     <Card.Img variant="top" src={writers[0].img} alt="image"/>
