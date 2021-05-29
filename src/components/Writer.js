@@ -2,7 +2,7 @@ import React from "react";
 import writers from "../data/writers.js";
 import {useTranslation} from "react-i18next";
 import {Carousel, Container, Image} from "react-bootstrap";
-import {Timeline} from 'vertical-timeline-component-for-react';
+import {Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
 export default function Writer(props) {
     const {t} = useTranslation();
@@ -58,33 +58,24 @@ export default function Writer(props) {
 
     function renderTimeline() {
         return <Timeline className="mt-5" lineColor="white">
-            {/*{*/}
-            {/*    writers.bio.map((bioElem) => <TimelineItem*/}
-            {/*            dateText="11/2010 – Present"*/}
-            {/*            bodyContainerStyle={{*/}
-            {/*                background: '#ddd',*/}
-            {/*                padding: '20px',*/}
-            {/*                borderRadius: '8px'*/}
-            {/*            }}>*/}
-            {/*            <h3>Title, Company</h3>*/}
-            {/*            <h4>Subtitle</h4>*/}
-            {/*            <p>*/}
-            {/*                Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla*/}
-            {/*                exercitation. Veniam velit adipisicing anim excepteur nostrud magna*/}
-            {/*                nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure*/}
-            {/*                reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem*/}
-            {/*                est.*/}
-            {/*            </p>*/}
-            {/*            <p>*/}
-            {/*                Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla*/}
-            {/*                exercitation. Veniam velit adipisicing anim excepteur nostrud magna*/}
-            {/*                nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure*/}
-            {/*                reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem*/}
-            {/*                est.*/}
-            {/*            </p>*/}
-            {/*        </TimelineItem>*/}
-            {/*    )*/}
-            {/*}*/}
+            {
+                writer.bio.map((bioElem) => <TimelineItem
+                        dateText={bioElem.date}
+                        bodyContainerStyle={{
+                            background: '#ddd',
+                            paddingRight: '20px',
+                            paddingLeft: '20px',
+                            paddingBottom: '5px',
+                            paddingTop: '5px',
+                            borderRadius: '8px'
+                        }}>
+                        <h3 className={"mb-2"}>{bioElem.title}</h3>
+                        <p>
+                            {bioElem.text}
+                        </p>
+                    </TimelineItem>
+                )
+            }
         </Timeline>
     }
 }
