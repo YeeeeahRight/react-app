@@ -5,7 +5,12 @@
     "writers": "Writers",
     "about": "About site",
     "best": "Writer of the day",
-    "devs": "Developers"
+    "devs": "Developers",
+    "description": "О писателе",
+    "bio": "Биография",
+    "photos": "Фотографии",
+    "video": "Видео",
+    "map": "Карта"
   },
   "home": {
     "aboutHeader": "Site about belorussian writers",

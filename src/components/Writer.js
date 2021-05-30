@@ -2,7 +2,8 @@ import React from "react";
 import writers from "../data/writers.js";
 import {useTranslation} from "react-i18next";
 import {Carousel, Container, Image} from "react-bootstrap";
-import {Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
+import {Timeline, TimelineItem} from 'vertical-timeline-component-for-react';
+import NavHeader from "./NavHeader";
 
 export default function Writer(props) {
     const {t} = useTranslation();
@@ -10,7 +11,10 @@ export default function Writer(props) {
     let writer = writers[props.id - 1];
 
     return <>
-        <Container className="d-flex justify-content-around mb-5" style={{marginTop: "130px", width: '70%'}} fluid>
+        <NavHeader isPersonalPage={true}/>
+
+        <Container id="description" className="d-flex justify-content-around mb-5"
+                   style={{marginTop: "130px", width: '70%'}} fluid>
             <Image src={writer.img} className="a-auto" style={{width: '34%'}}/>
             <div className="d-flex flex-column text-white my-auto ml-5 text-center"
                  style={{
@@ -32,18 +36,18 @@ export default function Writer(props) {
 
         {renderPhotos()}
 
-        <Container className="mt-5 mb-4" style={{width: '70%'}}>
+        <Container id="video" className="mt-5 mb-4" style={{width: '70%'}}>
             <iframe style={{height: "60vh", width: "100%"}} src={writer.video} allowFullScreen></iframe>
         </Container>
 
-        <Container className="mt-5 mb-4" style={{width: '70%'}}>
+        <Container id="map" className="mt-5 mb-4" style={{width: '70%'}}>
             <iframe style={{height: "60vh", width: "100%"}} src={writer.location}></iframe>
         </Container>
 
     </>
 
     function renderPhotos() {
-        return <Container className="mb-5 mt-5" style={{width: '70%'}}>
+        return <Container id="photos" className="mb-5 mt-5" style={{width: '70%'}}>
             <Carousel style={{backgroundColor: "var(--dark)"}}>
                 {
                     writer.photos.map((photo) => <Carousel.Item>
@@ -57,25 +61,27 @@ export default function Writer(props) {
     }
 
     function renderTimeline() {
-        return <Timeline className="mt-5" lineColor="white">
-            {
-                writer.bio.map((bioElem) => <TimelineItem
-                        dateText={bioElem.date}
-                        bodyContainerStyle={{
-                            background: '#ddd',
-                            paddingRight: '20px',
-                            paddingLeft: '20px',
-                            paddingBottom: '5px',
-                            paddingTop: '5px',
-                            borderRadius: '8px'
-                        }}>
-                        <h3 className={"mb-2"}>{bioElem.title}</h3>
-                        <p>
-                            {bioElem.text}
-                        </p>
-                    </TimelineItem>
-                )
-            }
-        </Timeline>
+        return <Container id="bio" >
+            <Timeline className="mt-5" lineColor="white">
+                {
+                    writer.bio.map((bioElem) => <TimelineItem
+                            dateText={t(bioElem.date)}
+                            bodyContainerStyle={{
+                                background: '#ddd',
+                                paddingRight: '20px',
+                                paddingLeft: '20px',
+                                paddingBottom: '5px',
+                                paddingTop: '5px',
+                                borderRadius: '8px'
+                            }}>
+                            <h3 className={"mb-2"}>{t(bioElem.title)}</h3>
+                            <p>
+                                {t(bioElem.text)}
+                            </p>
+                        </TimelineItem>
+                    )
+                }
+            </Timeline>
+        </Container>
     }
 }

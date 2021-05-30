@@ -19,8 +19,6 @@ export default function WriterList() {
     })
 
     return <>
-        <NavHeader/>
-
         {
             id !== undefined ?
                 (
@@ -28,6 +26,7 @@ export default function WriterList() {
                 ) :
                 (
                     <>
+                        <NavHeader/>
                         <div className="d-flex justify-content-center mt-5">
                             <MDBCol md="6">
                                 <form className="form-inline mt-4 mb-4">
