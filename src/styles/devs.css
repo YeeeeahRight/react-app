@@ -1,0 +1,23 @@
+#devs {
+    background-color: #17212B;
+}
+
+#devs .row {
+    width: 70vh;
+}
+
+.dev {
+    color: white;
+    font-size: 20px;
+}
+
+.dev img {
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+}
+
+.dev:hover {
+    opacity: 0.8;
+    color: aqua;
+}

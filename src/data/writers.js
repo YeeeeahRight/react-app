@@ -5,7 +5,7 @@ const writers = [
         description: "writers.bryl.description",
         shortDescription: "writers.bryl.shortDescription",
         years: "1917-2006",
-        img: "./images/first.jpeg",
+        img: "/images/first.jpeg",
         photos: [
             "https://vytoki.net/content/00524-1-665x443.jpg?__id29045",
             "https://minsknews.by/wp-content/uploads/2020/10/ulicza-imeni.jpg",
@@ -48,7 +48,7 @@ const writers = [
         description: "writers.dubovka.description",
         shortDescription: "writers.dubovka.shortDescription",
         years: "1900-1976",
-        img: "./images/second.jpg",
+        img: "/images/second.jpg",
         photos: [
             "https://upload.wikimedia.org/wikipedia/ru/e/e1/Dubovka.jpg",
             "https://cikavy.com/img/writers/WRbGZOsztLlvn44umvO9.jpg",
@@ -91,7 +91,7 @@ const writers = [
         description: "writers.dudar.description",
         shortDescription: "writers.dudar.shortDescription",
         years: "1904-1937",
-        img: "./images/third.jpg",
+        img: "/images/third.jpg",
         photos: [
             "https://bessmertnybarak.ru/filesSt/7119_daylidovich_aleksandr_aleksandrovich/daylidovich_aleksandr_aleksandrovich.jpg",
             "https://bessmertnybarak.ru/filesSt/7119_daylidovich_aleksandr_aleksandrovich/daylidovich_aleksandr_aleksandrovich_foto_1554658760.jpg",
@@ -134,7 +134,7 @@ const writers = [
         description: "writers.jvalevskii.description",
         shortDescription: "writers.jvalevskii.shortDescription",
         years: "1967-...",
-        img: "./images/fourth.jpg",
+        img: "/images/fourth.jpg",
         photos: [
             "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Zhvalevsky.jpg/274px-Zhvalevsky.jpg",
             "http://www.lib.omsk.ru/pk/sites/default/files/220790_640_0.jpg",
@@ -177,7 +177,7 @@ const writers = [
         description: "writers.bondarenko.description",
         shortDescription: "writers.bondarenko.shortDescription",
         years: "1974-...",
-        img: "./images/five.jpg",
+        img: "/images/five.jpg",
         photos: [
             "https://upload.wikimedia.org/wikipedia/commons/e/ed/%D0%91%D0%BE%D0%BD%D0%B4%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE_%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87.jpg",
             "https://poznaniye.ru/upload/iblock/77a/77a723b2781a350bb6922452bde24568.png",
@@ -219,10 +219,10 @@ const writers = [
         description: "writers.ledenev.description",
         shortDescription: "writers.ledenev.shortDescription",
         years: "1941-...",
-        img: "./images/six.jpg",
+        img: "/images/six.jpg",
         photos: [
             "https://static.qrz.su/callbook/4011/559eb99239b38e6618415de2fdd44d21.jpg",
-            "https://www.qsl.net/eu1eu./images/ew1af_portrait.jpg",
+            "https://www.qsl.net/eu1eu/images/ew1af_portrait.jpg",
             "https://lh3.googleusercontent.com/proxy/GbfxbC4ZTC5KeJWTU9Z-GymTAUOe0gd-6usKYF1ZTaVgHxZPey83llugcrzror4xoUyO6ZOvnbxtsk7rVQ"
         ],
         video: "https://www.youtube.com/embed/lvCocP25et4",

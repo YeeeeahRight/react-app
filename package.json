@@ -1,5 +1,4 @@
 {
-  "homepage": "https://yeeeeahright.github.io/react-app/",
   "name": "new-app",
   "version": "0.1.0",
   "private": true,
@@ -21,8 +20,6 @@
     "vertical-timeline-component-for-react": "^1.0.7"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

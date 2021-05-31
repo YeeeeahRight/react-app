@@ -1,0 +1,16 @@
+#about {
+    background-color: #242F3D;
+    height: 100vh;
+}
+
+#best {
+    height: 100vh;
+}
+
+#best .card-content {
+    width: 39vh;
+}
+
+#best .card-content img {
+    height: 50vh;
+}

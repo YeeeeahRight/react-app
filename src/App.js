@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
-import Home from './components/Home';
-import WriterList from './components/WriterList';
+import HomePage from './components/HomePage';
+import WritersPage from './components/WritersPage';
 
 import './App.css';
 
@@ -16,10 +16,10 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <Home/>
+                        <HomePage/>
                     </Route>
                     <Route path="/writers/:id?">
-                        <WriterList/>
+                        <WritersPage/>
                     </Route>
                 </Switch>
             </Router>

@@ -2,8 +2,8 @@ import {Container, Dropdown, Nav, Navbar} from "react-bootstrap";
 import {HashLink} from "react-router-hash-link";
 import {Link} from "react-router-dom";
 import React from "react";
-
 import {useTranslation} from "react-i18next";
+import "../styles/nav-header.css";
 
 export default function NavHeader(props) {
     const {t, i18n} = useTranslation();
@@ -15,7 +15,7 @@ export default function NavHeader(props) {
     }
 
     return (
-        <Navbar collapseOnSelect fixed="top" expand="lg" style={{backgroundColor: "#17212B"}} variant="dark">
+        <Navbar collapseOnSelect fixed="top" expand="lg" className="navbar-block" variant="dark">
             <Container fluid="md">
                 <HashLink className="navbar-brand" to="/#about">{t('header.header')}</HashLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
@@ -58,11 +58,11 @@ export default function NavHeader(props) {
                                     </>
                                 )
                         }
-                        <Dropdown style={{marginLeft: "20px"}}>
+                        <Dropdown>
                             <Dropdown.Toggle variant="light">
                                 {t('header.language')}
                             </Dropdown.Toggle>
-                            <Dropdown.Menu style={{minWidth: "100px"}}>
+                            <Dropdown.Menu className="menu">
                                 <Dropdown.Item onClick={() => setLanguage("ru")}>Русский</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setLanguage("en")}>English</Dropdown.Item>
                             </Dropdown.Menu>

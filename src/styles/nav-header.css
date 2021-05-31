@@ -1,0 +1,11 @@
+.navbar-block {
+    background-color: #17212B;
+}
+
+.dropdown {
+    margin-left: 20px;
+}
+
+.dropdown .menu {
+    min-width: 100px;
+}
